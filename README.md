@@ -61,3 +61,9 @@ Write classes: Person class and Student class. Person should have:
 let user1 = new Person("Name", "Surname", "female", 23);
 console.log(user1.toString()); // Name Surname, 23 years old.
 ```
+
+### 05. [Librery and book](Libery_Book.js)
+
+Describe a model of a library. For that define classes: Library, Reader, Book.
+To create correct hierarchies and connections, you should have a subclasses of Book such as
+LibraryBookBase, LibraryBook, ReaderBook.

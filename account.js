@@ -1,18 +1,13 @@
 
 class Account {
-    constructor( name, balance) {
+    constructor(name, balance) {
 
-       this.id =  function foo (id) {
-            return function(num) {
-                return id;
-                id+=num;
-                
-            } 
-       }(0)(1)
-
+       this.id =  Account.incrementId++
+       
        this._name = name
        this._balance = balance
     }
+    static incrementId = 0;
     get name () {
         return this._name
     }
@@ -41,12 +36,14 @@ class Account {
                 return 'Amount exceeded balance.'
         }
     }
-    static identifyAccounts(accountFirst, accountSecond) {
-
+    toString() {
+        return 'hello'
     }
-}
+      }
+    
+
 
 let savingAcc = new Account ('Saving account', 2000)
 let gago = new Account('cdc', 454)
 console.log(savingAcc)
-console.log(gago)
+console.log(gago.debit(500))

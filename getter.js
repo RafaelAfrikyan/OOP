@@ -11,11 +11,19 @@ class Author {
             return 'Mr. ' + this._name;
         }
     }
+    get name () {
+        return this._name
+    }
+    set name (value) {
+        if(typeof value !== 'strin') {
+            throw new Error('throw error')
+        }
+    }
     get gender (){
         return this._gender
     }
-    get name () {
-        return this._name
+    get email () {
+        return this._email
     }
 }
 
@@ -45,9 +53,9 @@ class Book {
 let author1 = new Author ("J. K. Rowling", "abc@gmail.com", "male");
 
 
-
-
 console.log(author1.toString());
 
-console.log(author1.name = 12)
+console.log(author1.name)
+
+
 
