@@ -110,7 +110,6 @@ class Student extends Person {
     }
 
     passExam(programName, grade){
-
        this.program.forEach((item) => {
            if(programName === item.programName && grade >=50){
                item.grade = grade
@@ -138,9 +137,11 @@ const firstStudent = {
 
   const student1 = new Student(firstStudent);
 
-  console.log(student1.passExam('english', 70));
+  student1.passExam('math', 80);
+  student1.passExam('english', 70);
+
   console.log(student1.program)
-  console.log(student1.isAllPassed());
+
 
 
 

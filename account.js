@@ -31,7 +31,7 @@ class Account {
     }
     transferTo(anotherAccount, amount) {
         if(amount < this._balance) {
-        return this._balance = (this._balance - amount) + anotherAccount
+        return this._balance = (this._balance + amount) - anotherAccount
         } else {
                 return 'Amount exceeded balance.'
         }
