@@ -67,3 +67,18 @@ console.log(user1.toString()); // Name Surname, 23 years old.
 Describe a model of a library. For that define classes: Library, Reader, Book.
 To create correct hierarchies and connections, you should have a subclasses of Book such as
 LibraryBookBase, LibraryBook, ReaderBook.
+
+### 06. [Shiritori](shiritori.js)
+
+### Shiritori
+This challenge is an English twist on the Japanese word game Shiritori. The basic premise is to follow two
+rules:
+
+- First character of next word must match last character of previous word.
+- The word must not have already been said.
+
+```js
+["word", "dowry", "yodel", "leader", "righteous", "serpent"]; // valid!
+["motive", "beach"]; // invalid! - beach should start with "e"
+["hive", "eh", "hive"]; // invalid! - "hive" has already been said
+```
