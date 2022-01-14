@@ -19,14 +19,12 @@ class Book {
             return true
         } else return false
     }
-
 }
 
 const instance = {
     title: 'cdcv',
     author: 'vdvcd',
 }
-
 
 
 class LibraryBookBase extends Book{
@@ -50,6 +48,7 @@ class LibraryBookBase extends Book{
         return 'hello'
     }
 }
+const klon1 = new LibraryBookBase(instance)
 
 
 class LibraryBook extends Book {
@@ -58,6 +57,7 @@ class LibraryBook extends Book {
         this.bookId = LibraryBookBase.index++
         this.quantity = quantity
     }
+    
     increaseQuantityBy(amount){
         return this.quantity+=amount
 
@@ -66,6 +66,11 @@ class LibraryBook extends Book {
         return this.quantity-=amount
     }
 }
+const klon = new LibraryBook(instance)
+const klon2 = new LibraryBook(instance)
+
+console.log(klon2)
+
 
 class ReaderBook extends Book {
     constructor({title, author}){
@@ -86,16 +91,13 @@ class Reader {
     static index = 0;
     toString() {
         return 'hello'
-    }
-
-    
+    }    
 }
-
-
 
 const reader = {
-    firstName: 'Rafael'
-    lastName: 'Afrikyan'
-    readerId: Reader.index++
+    firstName: 'Rafael',
+    lastName: 'Afrikyan',
+    readerId: Reader.index++,
     books: []
 }
+
